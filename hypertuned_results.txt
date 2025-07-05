@@ -1,0 +1,26 @@
+Model Performance Results
+========================================
+Linear Regression (Baseline):
+  MSE: 24.29
+  R²: 0.67
+------------------------------
+Decision Tree (Baseline):
+  MSE: 10.42
+  R²: 0.86
+------------------------------
+Random Forest (Baseline):
+  MSE: 7.91
+  R²: 0.89
+------------------------------
+Linear Regression (Tuned):
+  MSE: 24.29
+  R²: 0.67
+------------------------------
+Decision Tree (Tuned):
+  MSE: 8.55
+  R²: 0.88
+------------------------------
+Random Forest (Tuned):
+  MSE: 7.45
+  R²: 0.90
+------------------------------
