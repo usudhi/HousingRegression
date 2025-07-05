@@ -27,27 +27,6 @@ def run_pipeline():
         result = evaluate_model(model, X_test, y_test, f"{name} (Baseline)")
         baseline_results.append(result)
 
-    print("\n Tuning hyperparameters...")
-    param_grids = get_hyperparameter_grids()
-    tuned_models = perform_hyperparameter_tuning(models, param_grids, X_train, y_train)
-
-    print("\n Evaluating tuned models...")
-    tuned_results = []
-
-    for name, model in tuned_models.items():
-        result = evaluate_model(model, X_test, y_test, f"{name} (Tuned)")
-        tuned_results.append(result)
-        plot_predictions(y_test, result['predictions'], f"{name} (Tuned)")
-
-    all_results = baseline_results + tuned_results
-
-    print("\n Comparing all models...")
-    compare_models(all_results)
-
-    print("\n Saving results to file...")
-    save_results_to_file(all_results, "hypertuned_results.txt")
-
-    print("\n Pipeline completed! Check plots and results in output folder.")
 
 
 if __name__ == "__main__":
